@@ -8,19 +8,18 @@ baseurl: "" # the subpath of your site, e.g. /blog
 
 # Navigation
 urls:
-    - text: Home
-      url: /
-    - text: About
-      url: /about
-    - text: Blog
-      url: /blog
-    # - text: Gallery
-    #   url: /gallery
-    # - text: Shop
-    #   url : /shop
-    # - text: Contact
-    #   url : /contact
-
+  - text: Home
+    url: /
+  - text: About
+    url: /about
+  - text: Blog
+    url: /blog
+  # - text: Gallery
+  #   url: /gallery
+  # - text: Shop
+  #   url : /shop
+  # - text: Contact
+  #   url : /contact
 
 # Edit Author details (For multi authors check _data/authors.yml)
 
@@ -35,44 +34,44 @@ hero_cover_img: sample_cover.jpg # replace this for changing homepage cover (eg.
 
 # Experiences
 author_work_experiences:
-            - company_name: Google
-              company_logo: google.png
-              company_url: https://google.com
-              designation: Software Engineer
-              description: Worked on various Google Products
-              visibility: true
-            - company_name: Microsoft
-              company_logo: microsoft.png
-              company_url: https://microsoft.com
-              designation: Azure Developer
-              description: Worked on various Azure Cloud Products
-              visibility: true
+  - company_name: E.ON Digital Technology GmbH
+    company_logo: eon.png
+    company_url: https://www.eon.com/
+    designation: Cyber Security Engineer & Incident Responder
+    description: Worked in various cyber sec projects
+    visibility: true
+  # - company_name: Microsoft
+  #   company_logo: microsoft.png
+  #   company_url: https://microsoft.com
+  #   designation: Azure Developer
+  #   description: Worked on various Azure Cloud Products
+  #   visibility: true
 
 # Education
 author_education_details:
-              - college_logo: mit.png
-                college_name: MIT
-                college_url: https://mit.org
-                college_degree: CS Engineer
-                description: Bachelor of Technology
-                visibility: true
+  - college_logo: lfh.png
+    college_name: Leibniz School of Business
+    college_url: https://leibniz-fh.de/studiengaenge/it-security/
+    college_degree: BSc. IT Security
+    description: Bachelor of Science
+    visibility: true
 
 # Projects
 author_project_details:
-              - project_thumbnail: gamershub.png
-                project_title: Gamers Hub
-                project_description: A Platform built for Gamers and Game Devs
-                project_url: https://gamershub.in
-                visibility: true
-              - project_thumbnail: hack4r.PNG
-                project_title: Hack4r
-                project_description: A Platform built for Hackers and Penetration Testers
-                project_url: https://hack4r.com
-                visibility: true
+  - project_thumbnail: cve.jpg
+    project_title: CVE-2021-42694
+    project_description: Payload generator for homoglyphic-attack
+    project_url: https://github.com/simplylu/CVE-2021-42694
+    visibility: true
+  - project_thumbnail: cve.jpg
+    project_title: CVE-2021-42574
+    project_description: Payload generator for bidi-attack
+    project_url: https://github.com/simplylu/CVE-2021-42574
+    visibility: true
 
 # social links
 # twitter_username: johndoe
-github_username:  simplylu
+github_username: simplylu
 # facebook_username: johndoe
 linkedin_username: luna-s
 # behance_username: johndoe
@@ -88,7 +87,7 @@ linkedin_username: luna-s
 # hyvor_talk_website_id: 476
 
 # wakatime username (coding activity)
-# wakatime_username: sujaykundu777
+# wakatime_username: simplylu
 
 # mailchimp embedded form url (newsletter):
 # mailchimp_form_url: https://sujaykundu.us10.list-manage.com/subscribe/post?u=50bab1c85eae24ecfb0f68361&amp;id=3a2dd721d0
@@ -139,21 +138,18 @@ collections:
     output: true
 
 defaults:
-  -
-    scope:
+  - scope:
       path: "gallery"
     values:
       permalink: /:path/:basename:output_ext
-  -
-    scope:
+  - scope:
       path: ""
       type: authors
     values:
       layout: author
       permalink: /blog/authors/:slug
-  -
-    scope:
-      path: 'assets/**'
+  - scope:
+      path: "assets/**"
     values:
       sitemap: false
 
@@ -174,7 +170,6 @@ jekyll_admin:
   #   - datafiles
   #   - configuration
   homepage: "posts"
-
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -225,6 +220,5 @@ exclude:
   - assets/bower_components/lightgallery/test/lightgallery.html
   - assets/bower_components/masonry-layout/README.md
   - assets/bower_components/imagesloaded/README.md
-
 
 destination: ./build

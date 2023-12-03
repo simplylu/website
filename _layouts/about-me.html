@@ -123,10 +123,10 @@ layout: default
         <div class="col-md-6">
           <img
             src="{{site.url}}{{site.baseurl}}/assets/img/{{project.project_thumbnail}}"
-            class="project-img"
+            class="project-img" style="padding-right: 10px;"
           />
         </div>
-        <div class="col-md-4 center">
+        <div class="col-md-4 center" style="padding-left: 10px;">
           <h4 class="experience-title">{{ project.project_title }}</h4>
           <h6 class="experience-info">{{ project.project_info}}</h6>
           <p class="experience-desc">{{ project.project_description }}</p>
@@ -137,6 +137,8 @@ layout: default
           </p>
         </div>
       </div>
+      <br />
+      <hr>
       <br />
       {% endif %} {% endfor %}
     </div>
