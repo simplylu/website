@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  How to use hCaptcha with nicegui
+title:  How to use HCaptcha with nicegui
 summary: Explanation on how to integrate HCaptcha into your nicegui application
 author: luna
 date: 'Fr 22. Dez 16:30:27 CET 2023'
