@@ -108,13 +108,16 @@ async def check_captcha() -> bool:
 Now we need to modify the `try_login()` function to not only check for the credentials, but also check if the captcha has been solved successfully. To do so, we add only two lines of code to it.
 
 ```python
-if passwords.get(username.value) == password.value:
+async def try_login() -> None:
     captcha_passed = await check_captcha()
     if captcha_passed:
-        app.storage.user.update({"username": username.value, "authenticated": True})
-        ui.open(app.storage.user.get("referrer_path", "/"))  # go back to where the user wanted to go
-else:
-    ui.notify("Wrong username or password", color="negative")
+        if passwords.get(username.value) == password.value:
+                app.storage.user.update({"username": username.value, "authenticated": True})
+                ui.open(app.storage.user.get("referrer_path", "/"))  # Go back to where the user wanted to go
+        else:
+            ui.notify("Wrong username or password", color="negative")
+    else:
+        ui.notify("Captcha not passed", color="negative")
 ```
 
 
